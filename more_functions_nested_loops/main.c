@@ -3,10 +3,16 @@
 
 int main(void)
 {
-	printf("%d\n", _isdigit('5')); /* 1 */
-	printf("%d\n", _isdigit('a')); /* 0 */
-	printf("%d\n", _isdigit('0')); /* 1 */
-	printf("%d\n", _isdigit('9')); /* 1 */
-	printf("%d\n", _isdigit('x')); /* 0 */
+	int result;
+
+	result = mul(5, 3);
+	printf("%d\n", result);  /* 15 */
+
+	result = mul(-4, 6);
+	printf("%d\n", result);  /* -24 */
+
+	result = mul(0, 10);
+	printf("%d\n", result);  /* 0 */
+
 	return (0);
 }
