@@ -5,13 +5,20 @@ int main(void)
 {
 int r;
 
-r = _isalpha('H');
+r = print_sign(98);
+_putchar(',');
+_putchar(' ');
 printf("%d\n", r);
-r = _isalpha('o');
+
+r = print_sign(0);
+_putchar(',');
+_putchar(' ');
 printf("%d\n", r);
-r = _isalpha(108);
+
+r = print_sign(-1);
+_putchar(',');
+_putchar(' ');
 printf("%d\n", r);
-r = _isalpha(';');
-printf("%d\n", r);
+
 return (0);
 }
