@@ -3,11 +3,15 @@
 
 int main(void)
 {
-char ch1 = 'g';
-char ch2 = 'G';
+int r;
 
-printf("%d\n", _islower(ch1)); 
-printf("%d\n", _islower(ch2)); 
-
-return 0;
+r = _isalpha('H');
+printf("%d\n", r);
+r = _isalpha('o');
+printf("%d\n", r);
+r = _isalpha(108);
+printf("%d\n", r);
+r = _isalpha(';');
+printf("%d\n", r);
+return (0);
 }
