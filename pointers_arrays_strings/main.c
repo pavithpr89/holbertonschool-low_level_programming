@@ -1,10 +1,13 @@
+#include <stdio.h>
 #include "main.h"
 
 int main(void)
 {
-	int arr[] = {0, 1, 2, 3, 4, 5};
+	char src[] = "Hello, world!";
+	char dest[50];
 
-	print_array(arr, 6); /* Output: 0, 1, 2, 3, 4, 5 */
-	print_array(arr, 3); /* Output: 0, 1, 2 */
+	_strcpy(dest, src);
+	printf("Copied string: %s\n", dest); /* Output: Hello, world! */
+
 	return (0);
 }
