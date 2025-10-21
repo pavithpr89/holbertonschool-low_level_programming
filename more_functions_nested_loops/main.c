@@ -2,8 +2,8 @@
 
 int main(void)
 {
-	print_line(5);
-	print_line(0);
-	print_line(10);
+	print_diagonal(5);
+	print_diagonal(0);
+	print_diagonal(3);
 	return (0);
 }
