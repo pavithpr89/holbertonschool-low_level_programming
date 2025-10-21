@@ -2,8 +2,9 @@
 
 int main(void)
 {
-	puts_half("Hello, world!"); /* Output: world! */
-	puts_half("ABCDE");          /* Output: CDE */
-	puts_half("ABCD");           /* Output: CD */
+	int arr[] = {0, 1, 2, 3, 4, 5};
+
+	print_array(arr, 6); /* Output: 0, 1, 2, 3, 4, 5 */
+	print_array(arr, 3); /* Output: 0, 1, 2 */
 	return (0);
 }
