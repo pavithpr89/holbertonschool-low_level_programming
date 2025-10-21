@@ -1,9 +1,12 @@
 #include "main.h"
 
+/**
+ * main - Entry point
+ *
+ * Return: 0
+ */
 int main(void)
 {
-	print_square(3);
-	print_square(0);
-	print_square(5);
+	fizzbuzz();
 	return (0);
 }
