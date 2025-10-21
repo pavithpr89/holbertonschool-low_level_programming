@@ -2,7 +2,8 @@
 
 int main(void)
 {
-	puts2("Hello, world!");
-	puts2("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	puts_half("Hello, world!"); /* Output: world! */
+	puts_half("ABCDE");          /* Output: CDE */
+	puts_half("ABCD");           /* Output: CD */
 	return (0);
 }
