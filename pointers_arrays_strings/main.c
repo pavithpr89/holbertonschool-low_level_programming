@@ -1,10 +1,8 @@
-#include <stdio.h>
 #include "main.h"
 
 int main(void)
 {
-	char str[] = "Hello, world!";
-
-	printf("Length of \"%s\" is %d\n", str, _strlen(str));
+	_puts("Hello, world!");
+	_puts("This is a test.");
 	return (0);
 }
