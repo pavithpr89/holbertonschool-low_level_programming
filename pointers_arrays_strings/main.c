@@ -3,11 +3,8 @@
 
 int main(void)
 {
-	int x = 10, y = 20;
+	char str[] = "Hello, world!";
 
-	printf("Before swap: x = %d, y = %d\n", x, y);
-	swap_int(&x, &y);
-	printf("After swap: x = %d, y = %d\n", x, y);
-
+	printf("Length of \"%s\" is %d\n", str, _strlen(str));
 	return (0);
 }
