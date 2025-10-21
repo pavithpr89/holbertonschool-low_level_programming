@@ -3,11 +3,11 @@
 
 int main(void)
 {
-	int num = 0;
+	int x = 10, y = 20;
 
-	printf("Before: %d\n", num);
-	reset_to_98(&num);
-	printf("After: %d\n", num);
+	printf("Before swap: x = %d, y = %d\n", x, y);
+	swap_int(&x, &y);
+	printf("After swap: x = %d, y = %d\n", x, y);
 
 	return (0);
 }
