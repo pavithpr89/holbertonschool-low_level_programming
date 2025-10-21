@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	_puts("Hello, world!");
-	_puts("This is a test.");
+	print_rev("Hello, world!");
+	print_rev("ABCD");
 	return (0);
 }
