@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * main - test the reverse_array function
+ * main - test the string_toupper function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	int arr[5] = {1, 2, 3, 4, 5};
+	char str[] = "Hello, World!";
 	int i;
 
-	reverse_array(arr, 5);
+	string_toupper(str);
 
-	/* Print reversed array using _putchar */
-	for (i = 0; i < 5; i++)
+	/* Print resulting string using _putchar */
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(arr[i] + '0'); /* convert int to char for printing */
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 
