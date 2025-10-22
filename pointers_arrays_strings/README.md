@@ -13,7 +13,7 @@ task 8 : Write a function that prints n elements of an array of integers, follow
 task 9 : Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest
 task 10 : Write a function that convert a string to an integer.
 
-
+task 0: Write a function that concatenates two strings.
 
 
 
