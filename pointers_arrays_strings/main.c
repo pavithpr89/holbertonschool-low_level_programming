@@ -1,23 +1,24 @@
 #include "main.h"
 
 /**
- * main - test the _strcat function
+ * main - test the _strncat function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char dest[50] = "Hello, ";
+	char dest[20] = "Hello, ";
 	char *src = "World!";
+	char *result;
 	int i;
 
-	_strcat(dest, src);
+	result = _strncat(dest, src, 3); /* append at most 3 bytes from src */
 
-	/* Print concatenated string using _putchar */
+	/* Print the resulting string using _putchar */
 	i = 0;
-	while (dest[i] != '\0')
+	while (result[i] != '\0')
 	{
-		_putchar(dest[i]);
+		_putchar(result[i]);
 		i++;
 	}
 	_putchar('\n');
