@@ -1,26 +1,23 @@
 #include "main.h"
 
 /**
- * main - test the _strncat function
+ * main - test the _strncpy function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char dest[20] = "Hello, ";
-	char *src = "World!";
-	char *result;
+char src[] = "Hello";
+	char dest[10];
 	int i;
 
-	result = _strncat(dest, src, 3); /* append at most 3 bytes from src */
+	/* Copy at most 8 bytes */
+	_strncpy(dest, src, 8);
 
-	/* Print the resulting string using _putchar */
-	i = 0;
-	while (result[i] != '\0')
-	{
-		_putchar(result[i]);
-		i++;
-	}
+	/* Print the resulting buffer using _putchar */
+	for (i = 0; i < 8; i++)
+		_putchar(dest[i]);
+
 	_putchar('\n');
 
 	return (0);
