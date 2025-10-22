@@ -1,23 +1,33 @@
 #include "main.h"
 
 /**
- * main - test the _strncpy function
+ * main - test the _strcmp function
  *
  * Return: Always 0
  */
 int main(void)
 {
-char src[] = "Hello";
-	char dest[10];
-	int i;
+	char *str1 = "Hello";
+	char *str2 = "Hello";
+	char *str3 = "World";
+	int res;
 
-	/* Copy at most 8 bytes */
-	_strncpy(dest, src, 8);
+	/* Compare str1 and str2 */
+	res = _strcmp(str1, str2); /* should be 0 */
+	if (res == 0)
+		_putchar('0');
+	_putchar('\n');
 
-	/* Print the resulting buffer using _putchar */
-	for (i = 0; i < 8; i++)
-		_putchar(dest[i]);
+	/* Compare str1 and str3 */
+	res = _strcmp(str1, str3); /* negative */
+	if (res < 0)
+		_putchar('-');
+	_putchar('\n');
 
+	/* Compare str3 and str1 */
+	res = _strcmp(str3, str1); /* positive */
+	if (res > 0)
+		_putchar('+');
 	_putchar('\n');
 
 	return (0);
