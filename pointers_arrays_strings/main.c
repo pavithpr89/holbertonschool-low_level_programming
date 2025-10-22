@@ -1,33 +1,22 @@
 #include "main.h"
 
 /**
- * main - test the _strcmp function
+ * main - test the reverse_array function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char *str1 = "Hello";
-	char *str2 = "Hello";
-	char *str3 = "World";
-	int res;
+	int arr[5] = {1, 2, 3, 4, 5};
+	int i;
 
-	/* Compare str1 and str2 */
-	res = _strcmp(str1, str2); /* should be 0 */
-	if (res == 0)
-		_putchar('0');
-	_putchar('\n');
+	reverse_array(arr, 5);
 
-	/* Compare str1 and str3 */
-	res = _strcmp(str1, str3); /* negative */
-	if (res < 0)
-		_putchar('-');
-	_putchar('\n');
-
-	/* Compare str3 and str1 */
-	res = _strcmp(str3, str1); /* positive */
-	if (res > 0)
-		_putchar('+');
+	/* Print reversed array using _putchar */
+	for (i = 0; i < 5; i++)
+	{
+		_putchar(arr[i] + '0'); /* convert int to char for printing */
+	}
 	_putchar('\n');
 
 	return (0);
