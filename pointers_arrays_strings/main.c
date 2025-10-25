@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
- * main - test the string_toupper function
+ * main - test the cap_string function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char str[] = "Hello, World!";
+	char str[] = "hello! how are you? i am fine. (really)";
 	int i;
 
-	string_toupper(str);
+	cap_string(str);
 
-	/* Print resulting string using _putchar */
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
