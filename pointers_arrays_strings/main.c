@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * main - test the cap_string function
+ * main - test the leet function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char str[] = "hello! how are you? i am fine. (really)";
+	char str[] = "Leet speak is cool!";
 	int i;
 
-	cap_string(str);
+	leet(str);
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
