@@ -1,23 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - tests the _strstr function
+ * main - test the print_chessboard function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char *haystack = "hello world";
-	char *needle = "world";
-	char *result;
+	char board[8][8] = {
+		{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
+		{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+		{'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}
+	};
 
-	result = _strstr(haystack, needle);
-
-	if (result != 0)
-		printf("Substring found: %s\n", result);
-	else
-		printf("Substring not found\n");
+	print_chessboard(board);
 
 	return (0);
 }
