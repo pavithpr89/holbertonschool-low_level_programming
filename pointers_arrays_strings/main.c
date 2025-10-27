@@ -1,25 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - test the _strspn function
+ * main - test the _strpbrk function
  *
  * Return: Always 0
  */
 int main(void)
 {
 	char *s = "hello world";
-	char *accept = "helowrd";
-	unsigned int n;
+	char *accept = "ow";
+	char *result;
 
-	n = _strspn(s, accept);
+	result = _strpbrk(s, accept);
 
-	/* Print the number using _putchar */
-	if (n >= 10)
-	{
-		_putchar((n / 10) + '0');
-	}
-	_putchar((n % 10) + '0');
-	_putchar('\n');
+	if (result != 0)
+		printf("First matching byte: %s\n", result);
+	else
+		printf("No match found\n");
 
 	return (0);
 }
