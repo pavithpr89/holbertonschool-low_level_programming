@@ -2,22 +2,22 @@
 #include <stdio.h>
 
 /**
- * main - test the _strpbrk function
+ * main - tests the _strstr function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char *s = "hello world";
-	char *accept = "ow";
+	char *haystack = "hello world";
+	char *needle = "world";
 	char *result;
 
-	result = _strpbrk(s, accept);
+	result = _strstr(haystack, needle);
 
 	if (result != 0)
-		printf("First matching byte: %s\n", result);
+		printf("Substring found: %s\n", result);
 	else
-		printf("No match found\n");
+		printf("Substring not found\n");
 
 	return (0);
 }
