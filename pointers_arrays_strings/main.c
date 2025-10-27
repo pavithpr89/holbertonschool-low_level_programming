@@ -1,21 +1,31 @@
 #include "main.h"
 
 /**
- * main - test the _memcpy function
+ * main - test the _strchr function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char src[10] = "Holberton";
-	char dest[10];
-	unsigned int i;
+	char *s = "Holberton School";
+	char *ptr;
 
-	_memcpy(dest, src, 10);
+	ptr = _strchr(s, 'S');
 
-	for (i = 0; i < 10; i++)
+	if (ptr)
 	{
-		_putchar(dest[i]);
+		while (*ptr)
+		{
+			_putchar(*ptr);
+			ptr++;
+		}
+	}
+	else
+	{
+		_putchar('N');
+		_putchar('U');
+		_putchar('L');
+		_putchar('L');
 	}
 	_putchar('\n');
 
