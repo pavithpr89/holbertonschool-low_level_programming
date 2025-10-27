@@ -23,6 +23,8 @@ task 6 : Write a function that capitalizes all words of a string
 task 7 : Write a function that encodes a string into 1337
 
 task 0 : Write a function that fills memory with a constant byte
+task 1 : Write a function that copies memory area
+
 
 
 
