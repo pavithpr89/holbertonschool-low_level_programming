@@ -1,32 +1,24 @@
 #include "main.h"
 
 /**
- * main - test the _strchr function
+ * main - test the _strspn function
  *
  * Return: Always 0
  */
 int main(void)
 {
-	char *s = "Holberton School";
-	char *ptr;
+	char *s = "hello world";
+	char *accept = "helowrd";
+	unsigned int n;
 
-	ptr = _strchr(s, 'S');
+	n = _strspn(s, accept);
 
-	if (ptr)
+	/* Print the number using _putchar */
+	if (n >= 10)
 	{
-		while (*ptr)
-		{
-			_putchar(*ptr);
-			ptr++;
-		}
+		_putchar((n / 10) + '0');
 	}
-	else
-	{
-		_putchar('N');
-		_putchar('U');
-		_putchar('L');
-		_putchar('L');
-	}
+	_putchar((n % 10) + '0');
 	_putchar('\n');
 
 	return (0);
