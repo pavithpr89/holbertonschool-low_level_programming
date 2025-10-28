@@ -8,9 +8,15 @@
  */
 int main(void)
 {
-	int len;
+	int r;
 
-	len = _strlen_recursion("Pav is awesome");
-	printf("Length: %d\n", len);
+	r = factorial(1);
+	printf("%d\n", r);
+	r = factorial(5);
+	printf("%d\n", r);
+	r = factorial(10);
+	printf("%d\n", r);
+	r = factorial(-3);
+	printf("%d\n", r);
 	return (0);
 }
