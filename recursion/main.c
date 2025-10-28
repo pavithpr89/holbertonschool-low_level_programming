@@ -7,6 +7,7 @@
  */
 int main(void)
 {
-	_puts_recursion("Pav is learning C");
+	_print_rev_recursion("Pav is coding!");
+	_putchar('\n');
 	return (0);
 }
