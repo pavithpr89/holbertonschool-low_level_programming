@@ -3,9 +3,11 @@
 
 int main(void)
 {
-	printf("%d\n", _sqrt_recursion(25));  /* Output: 5 */
-	printf("%d\n", _sqrt_recursion(16));  /* Output: 4 */
-	printf("%d\n", _sqrt_recursion(10));  /* Output: -1 */
-	printf("%d\n", _sqrt_recursion(-4));  /* Output: -1 */
+	printf("%d\n", is_prime_number(1));   /* Output: 0 */
+	printf("%d\n", is_prime_number(2));   /* Output: 1 */
+	printf("%d\n", is_prime_number(3));   /* Output: 1 */
+	printf("%d\n", is_prime_number(4));   /* Output: 0 */
+	printf("%d\n", is_prime_number(17));  /* Output: 1 */
+	printf("%d\n", is_prime_number(25));  /* Output: 0 */
 	return (0);
 }
