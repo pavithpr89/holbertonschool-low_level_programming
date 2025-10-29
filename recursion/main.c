@@ -1,22 +1,10 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
-	int r;
-
-	r = factorial(1);
-	printf("%d\n", r);
-	r = factorial(5);
-	printf("%d\n", r);
-	r = factorial(10);
-	printf("%d\n", r);
-	r = factorial(-3);
-	printf("%d\n", r);
+	printf("%d\n", _pow_recursion(2, 3));  /* Output: 8 */
+	printf("%d\n", _pow_recursion(5, 0));  /* Output: 1 */
+	printf("%d\n", _pow_recursion(3, -2)); /* Output: -1 */
 	return (0);
 }
