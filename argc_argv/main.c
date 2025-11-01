@@ -4,10 +4,10 @@
 int main(void)
 {
 	printf("Test 1:\n");
-	system("./args");
+	system("./printargs");
 	printf("\nTest 2:\n");
-	system("./args hello");
+	system("./printargs hello");
 	printf("\nTest 3:\n");
-	system("./args one two three");
+	system("./printargs this is a test");
 	return (0);
 }
