@@ -3,11 +3,11 @@
 
 int main(void)
 {
-	printf("Test 1:\n");
-	system("./printargs");
-	printf("\nTest 2:\n");
-	system("./printargs hello");
-	printf("\nTest 3:\n");
-	system("./printargs this is a test");
+	printf("Test 1 (2 * 3):\n");
+	system("./mul 2 3");
+	printf("\nTest 2 (10 * 5):\n");
+	system("./mul 10 5");
+	printf("\nTest 3 (wrong args):\n");
+	system("./mul 5");
 	return (0);
 }
