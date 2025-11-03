@@ -4,18 +4,17 @@
 
 int main(void)
 {
-	char *s;
-	char str[] = "Hello, world!";
+	char *result;
 
-	s = _strdup(str);
-	if (s == NULL)
+	result = str_concat("Hello", "World!");
+	if (result == NULL)
 	{
 		printf("Memory allocation failed\n");
 		return (1);
 	}
 
-	printf("%s\n", s);
+	printf("%s\n", result); /* Output: HelloWorld! */
 
-	free(s);
+	free(result);
 	return (0);
 }
