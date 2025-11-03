@@ -1,20 +1,22 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
-	char *result;
+	int *arr;
+	unsigned int i;
 
-	result = string_nconcat("Hello", "World!", 3);
-	if (result == NULL)
+	arr = _calloc(5, sizeof(int));
+	if (arr == NULL)
 	{
 		printf("Memory allocation failed\n");
 		return (1);
 	}
 
-	printf("%s\n", result); /* Output: HelloWor */
+	for (i = 0; i < 5; i++)
+		printf("%d ", arr[i]); /* Output: 0 0 0 0 0 */
+	printf("\n");
 
-	free(result);
+	free(arr);
 	return (0);
 }
