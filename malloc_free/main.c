@@ -17,13 +17,16 @@ int main(void)
 	for (i = 0; i < 4; i++)
 	{
 		for (j = 0; j < 3; j++)
+			grid[i][j] = i + j;
+	}
+
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 3; j++)
 			printf("%d ", grid[i][j]);
 		printf("\n");
 	}
 
-	for (i = 0; i < 4; i++)
-		free(grid[i]);
-	free(grid);
-
+	free_grid(grid, 4);
 	return (0);
 }
