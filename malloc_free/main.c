@@ -4,19 +4,18 @@
 
 int main(void)
 {
-	char *buffer;
+	char *s;
+	char str[] = "Hello, world!";
 
-	buffer = create_array(10, 'H');
-	if (buffer == NULL)
+	s = _strdup(str);
+	if (s == NULL)
 	{
-		printf("Failed to allocate memory\n");
+		printf("Memory allocation failed\n");
 		return (1);
 	}
 
-	for (int i = 0; i < 10; i++)
-		_putchar(buffer[i]);
-	_putchar('\n');
+	printf("%s\n", s);
 
-	free(buffer);
+	free(s);
 	return (0);
 }
