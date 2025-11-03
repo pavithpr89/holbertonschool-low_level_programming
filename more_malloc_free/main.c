@@ -1,16 +1,20 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
-	char *s;
+	char *result;
 
-	s = malloc_checked(10);
-	if (s != NULL)
+	result = string_nconcat("Hello", "World!", 3);
+	if (result == NULL)
 	{
-		printf("Memory allocated successfully\n");
-		free(s);
+		printf("Memory allocation failed\n");
+		return (1);
 	}
 
+	printf("%s\n", result); /* Output: HelloWor */
+
+	free(result);
 	return (0);
 }
