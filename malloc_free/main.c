@@ -4,17 +4,26 @@
 
 int main(void)
 {
-	char *result;
+	int **grid;
+	int i, j;
 
-	result = str_concat("Hello", "World!");
-	if (result == NULL)
+	grid = alloc_grid(3, 4);
+	if (grid == NULL)
 	{
-		printf("Memory allocation failed\n");
+		printf("Failed to allocate grid\n");
 		return (1);
 	}
 
-	printf("%s\n", result); /* Output: HelloWorld! */
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 3; j++)
+			printf("%d ", grid[i][j]);
+		printf("\n");
+	}
 
-	free(result);
+	for (i = 0; i < 4; i++)
+		free(grid[i]);
+	free(grid);
+
 	return (0);
 }
