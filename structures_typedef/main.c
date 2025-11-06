@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * main - check the code for new_dog
+ * main - check the code for free_dog
  *
  * Return: Always 0.
  */
@@ -18,12 +18,10 @@ int main(void)
 		return (1);
 	}
 
-	printf("Name: %s\nAge: %.2f\nOwner: %s\n",
+	printf("My dog: %s is %.2f years old and belongs to %s\n",
 	       my_dog->name, my_dog->age, my_dog->owner);
 
-	free(my_dog->name);
-	free(my_dog->owner);
-	free(my_dog);
+	free_dog(my_dog);
 
 	return (0);
 }
