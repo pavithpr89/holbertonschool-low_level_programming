@@ -1,21 +1,29 @@
-#include <stddef.h>
-#include <stdio.h> 
+#include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * main - test the print_dog function
+ * main - check the code for new_dog
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    dog_t my_dog;
+	dog_t *my_dog;
 
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
+	my_dog = new_dog("Ghost", 4.75, "Jon Snow");
+	if (my_dog == NULL)
+	{
+		printf("Failed to create dog\n");
+		return (1);
+	}
+
+	printf("Name: %s\nAge: %.2f\nOwner: %s\n",
+	       my_dog->name, my_dog->age, my_dog->owner);
+
+	free(my_dog->name);
+	free(my_dog->owner);
+	free(my_dog);
+
+	return (0);
 }
-
-
