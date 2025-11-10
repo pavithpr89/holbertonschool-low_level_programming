@@ -1,0 +1,50 @@
+#include "function_pointers.h"
+
+/**
+ * print_with_spaces - prints each letter of a name with spaces
+ * @name: string to print
+ */
+void print_with_spaces(char *name)
+{
+	int i = 0;
+
+	while (name[i] != '\0')
+	{
+		_putchar(name[i]);
+		_putchar(' ');
+		i++;
+	}
+	_putchar('\n');
+}
+
+/**
+ * print_uppercase - prints a name in uppercase
+ * @name: string to print
+ */
+void print_uppercase(char *name)
+{
+	int i = 0;
+	char c;
+
+	while (name[i] != '\0')
+	{
+		c = name[i];
+		if (c >= 'a' && c <= 'z')
+			c -= 32;
+		_putchar(c);
+		i++;
+	}
+	_putchar('\n');
+}
+
+/**
+ * main - check the code for print_name
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	print_name("Pav", print_with_spaces);
+	print_name("Holberton", print_uppercase);
+	return (0);
+}
