@@ -1,29 +1,35 @@
 #include <stdio.h>
 #include "function_pointers.h"
 
-int is_98(int elem)
+/**
+ * print_elem - prints an integer
+ * @elem: integer to print
+ */
+void print_elem(int elem)
 {
-	return (elem == 98);
+	printf("%d\n", elem);
 }
 
-int is_negative(int elem)
+/**
+ * print_elem_hex - prints an integer in hexadecimal
+ * @elem: integer to print
+ */
+void print_elem_hex(int elem)
 {
-	return (elem < 0);
+	printf("0x%x\n", elem);
 }
 
+/**
+ * main - test the array_iterator function
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int array[] = {0, -1, 98, 402, 1024, -4096};
-	int index;
+	int array[] = {0, 98, 402, 1024, 4096};
 
-	index = int_index(array, 6, is_98);
-	printf("Index of 98: %d\n", index);
-
-	index = int_index(array, 6, is_negative);
-	printf("Index of first negative: %d\n", index);
-
-	index = int_index(array, 6, NULL);
-	printf("Index (NULL cmp): %d\n", index);
+	array_iterator(array, 5, &print_elem);
+	array_iterator(array, 5, &print_elem_hex);
 
 	return (0);
 }
