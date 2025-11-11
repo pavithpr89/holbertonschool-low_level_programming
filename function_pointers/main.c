@@ -1,50 +1,29 @@
-#include "main.h"
+#include <stdio.h>
+#include "function_pointers.h"
 
-/**
- * print_with_spaces - prints each letter of a name with spaces
- * @name: string to print
- */
-void print_with_spaces(char *name)
+int is_98(int elem)
 {
-	int i = 0;
-
-	while (name[i] != '\0')
-	{
-		_putchar(name[i]);
-		_putchar(' ');
-		i++;
-	}
-	_putchar('\n');
+	return (elem == 98);
 }
 
-/**
- * print_uppercase - prints a name in uppercase
- * @name: string to print
- */
-void print_uppercase(char *name)
+int is_negative(int elem)
 {
-	int i = 0;
-	char c;
-
-	while (name[i] != '\0')
-	{
-		c = name[i];
-		if (c >= 'a' && c <= 'z')
-			c -= 32;
-		_putchar(c);
-		i++;
-	}
-	_putchar('\n');
+	return (elem < 0);
 }
 
-/**
- * main - check the code for print_name
- *
- * Return: Always 0.
- */
 int main(void)
 {
-	print_name("Pav", print_with_spaces);
-	print_name("Holberton", print_uppercase);
+	int array[] = {0, -1, 98, 402, 1024, -4096};
+	int index;
+
+	index = int_index(array, 6, is_98);
+	printf("Index of 98: %d\n", index);
+
+	index = int_index(array, 6, is_negative);
+	printf("Index of first negative: %d\n", index);
+
+	index = int_index(array, 6, NULL);
+	printf("Index (NULL cmp): %d\n", index);
+
 	return (0);
 }

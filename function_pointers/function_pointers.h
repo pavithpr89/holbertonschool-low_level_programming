@@ -1,21 +1,11 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
 
-/**
- * _putchar - writes a character to stdout
- * @c: The character to print
- *
- * Return: On success 1, or -1 on error.
- */
-int _putchar(char c);
+#include <stddef.h>
 
-/**
- * print_name - prints a name using a function pointer
- * @name: name to print
- * @f: pointer to a function that takes a string and returns nothing
- *
- * Return: nothing
- */
+int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
+void array_iterator(int *array, size_t size, void (*action)(int));
+int int_index(int *array, int size, int (*cmp)(int));
 
 #endif /* FUNCTION_POINTERS_H */
