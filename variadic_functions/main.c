@@ -1,10 +1,10 @@
 #include "variadic_functions.h"
-#include <stddef.h> /* For NULL */
+#include <stddef.h>
 
 int main(void)
 {
-	print_strings(", ", 3, "Hello", "Holberton", "World");
-	print_strings(" - ", 5, "One", NULL, "Three", "Four", NULL);
-	print_strings(NULL, 2, "OnlyOne", "OnlyTwo");
+	print_all("ceis", 'H', 0, 3.14, "Holberton");
+	print_all("sfcis", "Hi", 2.5, 'A', 42, NULL);
+	print_all(NULL);
 	return (0);
 }
