@@ -7,8 +7,10 @@
 /**
  * struct dlistint_s - doubly linked list node
  * @n: integer stored
- * @prev: pointer to the previous node
- * @next: pointer to the next node
+ * @prev: pointer to previous node
+ * @next: pointer to next node
+ *
+ * Description: doubly linked list structure for Holberton project
  */
 typedef struct dlistint_s
 {
@@ -17,10 +19,12 @@ typedef struct dlistint_s
 	struct dlistint_s *next;
 } dlistint_t;
 
+/* PROTOTYPES */
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
-void free_dlistint(dlistint_t *head);   /* <-- ADD THIS */
+void free_dlistint(dlistint_t *head);
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
 #endif /* LISTS_H */
